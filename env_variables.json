@@ -29,7 +29,7 @@
   },
   {
     "env_name": "KAFKA_USERNAME",
-    "variable_type": "Password",
+    "variable_type": "String",
     "mandatory": true,
     "about_variable": "Username for Kafka SCRAM-SHA-512 authentication."
   },
