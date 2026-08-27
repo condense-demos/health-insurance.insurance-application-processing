@@ -38,7 +38,7 @@ const run = async () => {
       try {
         const event = JSON.parse(message.value.toString());
         console.log(
-          `Received event: ${event.type} for application ${event.applicationId}`,
+          `Received event: ${event.eventType} for application ${event.applicationId}`,
         );
 
         const caseProcessedEvent = eventProcessor.processEvent(event);
