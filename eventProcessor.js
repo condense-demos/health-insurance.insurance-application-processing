@@ -206,7 +206,7 @@ class EventProcessor {
       return state.getCaseProcessedEvent(); // Return current state as if it was processed
     }
 
-    switch (type) {
+    switch (eventType) {
       case "APPLICATION_CREATED":
         state.processApplicationCreated(event);
         break;
