@@ -153,7 +153,7 @@ class ApplicationState {
   }
 
   getCaseProcessedEvent() {
-    return {
+    let caseProcessedEvent = {
       applicationId: this.applicationId,
       timestamp: new Date().toISOString(),
       status: this.status,
@@ -164,6 +164,9 @@ class ApplicationState {
         canProceedToReadiness: this.canProceedToReadiness,
       },
     };
+    console.info("caseProcessedEvent", caseProcessedEvent);
+
+    return caseProcessedEvent;
   }
 }
 
