@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "kafkajs": "^2.3.0"
+    "kafkajs": "^2.2.4"
   },
   "devDependencies": {
     "jest": "^29.7.0"
