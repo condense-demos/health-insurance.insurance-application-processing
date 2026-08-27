@@ -5,13 +5,13 @@ FROM node:20-slim
 WORKDIR /app
 
 # Copy package.json and package-lock.json (if any)
-COPY health-insurance.insurance-application-processing/package*.json ./
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy the application code
-COPY health-insurance.insurance-application-processing/ .
+COPY . .
 
 # Command to run the application
 CMD ["npm", "start"]
