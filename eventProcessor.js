@@ -40,10 +40,14 @@ class ApplicationState {
       return;
     }
     this.data = { ...this.data, ...event.payload };
+    const birthYear = new Date(this.data.dateOfBirth).getFullYear();
+    const currentYear = new Date().getFullYear();
+
+    this.data.age = currentYear - birthYear; // 2026 - 1974 = 52
     this.eventTimeline.push("APPLICATION_CREATED");
 
     // Initial validation
-    if (!this.data.applicantName) {
+    if (!this.data.applicant) {
       this.addBlocker("Applicant name is missing.");
     }
     if (!this.data.age) {
@@ -102,8 +106,8 @@ class ApplicationState {
     if (this.data.healthAnswers.diabetes === "YES") {
       this.addWarning("Applicant has diabetes.");
     }
-    if (!this.data.healthAnswers.doctorVisitedLastYear) {
-      this.addBlocker("Health question: doctorVisitedLastYear is missing.");
+    if (!this.data.healthAnswers.hospitalization) {
+      this.addBlocker("Health question: hospitalization is missing.");
     }
 
     if (this.blockers.length > 0) {
