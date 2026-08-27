@@ -19,6 +19,7 @@ const kafka = new Kafka({
   ssl: false,
 });
 
+const producer = kafka.producer();
 const consumer = kafka.consumer({ groupId: CLIENT_ID });
 const eventProcessor = new EventProcessor();
 
