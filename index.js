@@ -11,13 +11,13 @@ const KAFKA_PASSWORD = process.env.KAFKA_PASSWORD;
 const kafka = new Kafka({
   clientId: CLIENT_ID,
   brokers: BROKERS,
-    sasl: {
-        mechanism: 'scram-sha-512',
-        username: KAFKA_USERNAME,
-        password: KAFKA_PASSWORD,
-    },
-    ssl = false
-})
+  sasl: {
+    mechanism: "scram-sha-512",
+    username: KAFKA_USERNAME,
+    password: KAFKA_PASSWORD,
+  },
+  ssl: false,
+});
 
 const consumer = kafka.consumer({ groupId: CLIENT_ID });
 const eventProcessor = new EventProcessor();
