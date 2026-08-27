@@ -199,12 +199,12 @@ class EventProcessor {
 
     // Check if event is already processed based on event type and timestamp
     // This is a simplified duplicate check. A more robust solution might involve event IDs and a timestamp in the state.
-    if (state.eventTimeline.includes(eventType)) {
-      console.warn(
-        `Event type ${eventType} for ${applicationId} already processed. Ignoring.`,
-      );
-      return state.getCaseProcessedEvent(); // Return current state as if it was processed
-    }
+    // if (state.eventTimeline.includes(eventType)) {
+    //   console.warn(
+    //     `Event type ${eventType} for ${applicationId} already processed. Ignoring.`,
+    //   );
+    //   return state.getCaseProcessedEvent(); // Return current state as if it was processed
+    // }
 
     switch (eventType) {
       case "APPLICATION_CREATED":
