@@ -1,0 +1,15 @@
+{
+  "name": "insurance-application-processing",
+  "version": "1.0.0",
+  "description": "Processes insurance application events from Kafka.",
+  "main": "insurance_app/index.js",
+  "scripts": {
+    "start": "node insurance_app/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^2.3.0"
+  }
+}

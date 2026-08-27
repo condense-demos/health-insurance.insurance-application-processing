@@ -1,0 +1,30 @@
+[
+  {
+    "env_name": "KAFKA_BROKERS",
+    "variable_type": "String",
+    "mandatory": true,
+    "default_value": "localhost:9092",
+    "about_variable": "Comma-separated list of Kafka broker addresses."
+  },
+  {
+    "env_name": "INPUT_TOPIC",
+    "variable_type": "Input Topic",
+    "mandatory": true,
+    "default_value": "ASE_PROCESSED",
+    "about_variable": "The Kafka topic from which to consume raw application events."
+  },
+  {
+    "env_name": "OUTPUT_TOPIC",
+    "variable_type": "Output Topic",
+    "mandatory": true,
+    "default_value": "CASE_PROCESSED",
+    "about_variable": "The Kafka topic to which processed CASE_PROCESSED events will be published."
+  },
+  {
+    "env_name": "CLIENT_ID",
+    "variable_type": "String",
+    "mandatory": false,
+    "default_value": "insurance-application-processor",
+    "about_variable": "A unique identifier for this Kafka client."
+  }
+]
