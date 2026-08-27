@@ -17,9 +17,9 @@ These variables are crucial for connecting to Kafka brokers secured with SCRAM-S
 
 1.  **Environment Variable Loading**: `KAFKA_USERNAME` and `KAFKA_PASSWORD` are now read from the environment variables using `process.env`.
 2.  **Kafka Client Configuration**: The `Kafka` constructor call has been updated to include a `sasl` configuration object. This object specifies:
-    -   `mechanism: 'scram-sha-512'`: Indicates the authentication mechanism to be used.
-    -   `username: KAFKA_USERNAME`: Uses the loaded `KAFKA_USERNAME` for authentication.
-    -   `password: KAFKA_PASSWORD`: Uses the loaded `KAFKA_PASSWORD` for authentication.
+    - `mechanism: 'scram-sha-512'`: Indicates the authentication mechanism to be used.
+    - `username: KAFKA_USERNAME`: Uses the loaded `KAFKA_USERNAME` for authentication.
+    - `password: KAFKA_PASSWORD`: Uses the loaded `KAFKA_PASSWORD` for authentication.
 
 This ensures that the Kafka client can connect securely to brokers that require SCRAM-SHA-512 authentication.
 
@@ -31,4 +31,3 @@ A new test file, `test.js`, has been created to verify the Kafka client configur
 2.  **Without SASL**: When `KAFKA_USERNAME` and `KAFKA_PASSWORD` are not provided, the Kafka client should be initialized without the `sasl` configuration, maintaining backward compatibility.
 
 To run the tests, first ensure `jest` is installed (`npm install`), then execute: `npm test`
-
