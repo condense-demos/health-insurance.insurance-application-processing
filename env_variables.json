@@ -26,5 +26,17 @@
     "mandatory": false,
     "default_value": "insurance-application-processor",
     "about_variable": "A unique identifier for this Kafka client."
+  },
+  {
+    "env_name": "KAFKA_USERNAME",
+    "variable_type": "Password",
+    "mandatory": true,
+    "about_variable": "Username for Kafka SCRAM-SHA-512 authentication."
+  },
+  {
+    "env_name": "KAFKA_PASSWORD",
+    "variable_type": "Password",
+    "mandatory": true,
+    "about_variable": "Password for Kafka SCRAM-SHA-512 authentication."
   }
 ]

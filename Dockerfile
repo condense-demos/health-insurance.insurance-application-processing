@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copy the application code
-COPY insurance_app insurance_app
+COPY . .
 
 # Expose the port your app runs on (if any, not directly applicable here but good practice)
 # EXPOSE 3000 
