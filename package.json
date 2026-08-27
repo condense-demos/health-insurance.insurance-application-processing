@@ -2,9 +2,9 @@
   "name": "insurance-application-processing",
   "version": "1.0.0",
   "description": "Processes insurance application events from Kafka.",
-  "main": "health-insurance.insurance-application-processing/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node health-insurance.insurance-application-processing/index.js",
+    "start": "node index.js",
     "test": "jest --forceExit"
   },
   "keywords": [],
